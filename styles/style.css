@@ -110,11 +110,34 @@ p {
   overflow: hidden;
 }
 
+/* Custom styles for the Slick Carousel */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  display: none;
+}
+
+/* Additional styling for the project card */
 .project-card {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  color: #ffffff;
+  /* Your custom styles for project cards */
 }
 
 .project-card img {
