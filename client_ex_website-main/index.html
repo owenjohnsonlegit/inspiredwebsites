@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" description="Inspired Websites, AI Developed Websites and Services">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="./css/nav.css">
-        <title>Inspired Websites</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      description="Inspired Websites, AI Developed Websites and Services"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <title>Inspired Websites</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <img
+          class="bruh"
+          src="./imgs/inspired-websites-full-logo-transparent.png"
+          alt="logo"
+        />
+      </div>
+      <ul class="nav-container">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <a href="#">
+            <select name="Services" id="Services" class="Services">
+              <option value="Websites">Websites</option>
+              <option value="Mobile Apps">Mobile Apps</option>
+              <option value="Services">Services</option>
+            </select>
+          </a>
+        </li>
+      </ul>
+      <a id="light-mode-toggle" class="light-mode">Enable Light Mode</a>
+    </nav>
 
-        <nav>
-            <div>
-                <a href="#" class="logo">Inspired Websites</a>
-            </div>
-            <ul class="nav-container">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">
-                    <select name="Services" id="Services" class="Services">
-                        <option value="Websites">Websites</option>
-                        <option value="Mobile Apps">Mobile Apps</option>
-                        <option value="Services">Services</option>
-                    </select>
-                </a></li>
-            </ul>
-            <a id="light-mode-toggle" class="light-mode">Enable Light Mode</a>
-        </nav>
-
-        <section class="hero-section">
-            <div class="hero-left">
-                <h1 class="hero-title">Human Inspired, AI Developed</h1>
-                <p>Get a unique and creative website within 24 hours using the latest advancements in AI technology.</p>
-                <div class="hero-buttons">
-                    <button class="filled">Get Your Website</button>
-                    <button class="outlined">Learn More</button>
-                </div>
-                
-            </div>
-            <div class="hero-right">
-                <video src="final_boss.mp4" controls  ></video>
-            </div>
-        </section>
-        <script src="script.js"></script>
-    </body>
+    <section class="hero-section">
+      <div class="hero-left">
+        <h1 class="hero-title">Human Inspired, AI Developed</h1>
+        <p>
+          Get a unique and creative website within 24 hours using the latest
+          advancements in AI technology.
+        </p>
+        <div class="hero-buttons">
+          <button class="filled">Get Your Website</button>
+          <button class="outlined">Learn More</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <video src="final_boss.mp4" controls></video>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>
