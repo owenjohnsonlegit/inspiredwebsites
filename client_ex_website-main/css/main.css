@@ -1,0 +1,207 @@
+/*
+*Fonts
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* 
+* Custom CSS Colors 
+*/
+
+:root 
+{
+    --color-bg: #0B0B0B;
+    --color-foreground: #191919;
+    --color-text: #FFFFFF;
+    --color-subtext: #B8B8B8;
+    --primary-color: #4F82EE;
+
+    --background-grid: url('../BackgroundVec.svg') no-repeat center;
+    --background : var(--color-bg);
+}
+
+/* 
+* Dark Mode
+*/
+
+.lightMode 
+{
+    --color-bg: #f0f4ff;
+    --color-foreground: #EBEBEB;
+    --color-text: #000000;
+    --color-subtext: #191919;
+    --primary-color: #4F82EE;
+
+    --background-grid: url('../darkModeBackground.svg') no-repeat center;
+    --background : var(--color-bg);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* main Styling */
+
+body
+{
+    background: var(--background);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* 
+TODO Body elements
+*/
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-grid);
+    z-index: -1;
+}
+
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-left 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+}
+
+.hero-left h1
+{
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: var(--color-text);
+}
+
+.hero-left p
+{
+   margin-top: 2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    color: var(--color-subtext);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.filled,
+.outlined
+{
+    padding: .8rem 2rem;
+    border-radius: 2rem;
+    color: var(--color-text);
+    font-size: clamp(.8rem, 25vw, 1rem);
+}
+
+.filled
+{
+    border: none;
+    background: var(--primary-color);
+    cursor: pointer;
+}
+
+.outlined
+{
+    border: 2px solid var(--primary-color);
+    background: none;
+    cursor: pointer;
+}
+
+.outlined:hover,
+.filled:hover
+{
+    transition: .3s ease-in;
+    background: var(--primary-color);
+    color: var(--color-bg);
+}
+
+video 
+{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.469), 0 6px 20px 0 rgba(0, 0, 0, 0.405);
+    max-width: 800px;
+}
+
+.hero-right 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+@media screen and (max-width: 1330px) 
+{
+    .hero-section {
+        grid-template-columns: 1fr;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .hero-left,
+    .hero-right
+    {
+        text-align: left;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    
+    .hero-buttons
+    {
+        flex-direction: row;
+        margin: none;
+        gap: 1rem;
+    }
+
+    video
+    {
+        width: 90vw;
+        margin: 0 auto;
+
+    }
+}
+
+@media screen and (max-width: 768px) 
+{
+    .hero-section {
+        grid-template-columns: 1fr;
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+    }
+    
+    .filled,
+    .outlined
+    {
+        padding: .8rem 1rem;
+        border-radius: 1rem;
+        width: 40vw;
+    }
+}
